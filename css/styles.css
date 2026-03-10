@@ -632,7 +632,7 @@ a:hover {
    ═══════════════════════════════════════════ */
 .showcase-scroll {
   display: flex;
-  height: 440px;
+  height: 520px;
   overflow-x: auto;
   overflow-y: hidden;
   gap: 2px;
@@ -687,13 +687,12 @@ a:hover {
 
 /* Expandable content panel */
 .char-panel {
+  position: relative;
   flex: 1;
   min-width: 0;
   opacity: 0;
   overflow: hidden;
   transition: opacity 0.3s ease 0.1s;
-  display: flex;
-  flex-direction: column;
 }
 
 .char-card.active .char-panel {
@@ -701,18 +700,24 @@ a:hover {
 }
 
 .char-portrait {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 220px;
+  height: 100%;
   object-fit: cover;
   object-position: top center;
   display: block;
-  flex-shrink: 0;
 }
 
 .char-info {
-  padding: 14px 16px 16px;
-  flex: 1;
-  overflow: hidden;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 60px 16px 16px;
+  background: linear-gradient(to top, rgba(5,5,7,0.95) 0%, rgba(5,5,7,0.7) 50%, transparent 100%);
+  z-index: 1;
 }
 
 .char-creator {
@@ -952,10 +957,18 @@ a:hover {
 
   .char-panel {
     width: 100%;
+    position: relative;
   }
 
   .char-portrait {
-    height: 200px;
+    position: relative;
+    height: 250px;
+  }
+
+  .char-info {
+    position: relative;
+    background: none;
+    padding: 14px 16px 16px;
   }
 
   .sticky-nav {
