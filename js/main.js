@@ -162,6 +162,17 @@
 
   updateSoundUI();
 
+  // ─── Character Showcase Tabs ───
+  var charCards = document.querySelectorAll('.char-card');
+  charCards.forEach(function (card) {
+    card.addEventListener('click', function () {
+      if (card.classList.contains('active')) return;
+      charCards.forEach(function (c) { c.classList.remove('active'); });
+      card.classList.add('active');
+      card.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'nearest' });
+    });
+  });
+
 })();
 
 // ─── FAQ Accordion (global, called from onclick) ───

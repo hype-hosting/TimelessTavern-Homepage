@@ -628,35 +628,91 @@ a:hover {
 }
 
 /* ═══════════════════════════════════════════
-   CHARACTER SHOWCASE
+   CHARACTER SHOWCASE — Stacked Pull-Out Tabs
    ═══════════════════════════════════════════ */
 .showcase-scroll {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: 16px;
+  display: flex;
+  height: 440px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  gap: 2px;
+  scroll-behavior: smooth;
 }
 
 .char-card {
-  padding: 0;
+  position: relative;
+  flex-shrink: 0;
+  width: 44px;
+  height: 100%;
   border-left: 3px solid var(--violet);
-  transition: all 0.25s;
+  transition: width 0.4s ease;
   overflow: hidden;
+  cursor: pointer;
+  display: flex;
 }
 
-.char-card:hover {
-  transform: translateY(-2px);
+.char-card.active {
+  width: 340px;
+  cursor: default;
+}
+
+/* Vertical name tab — always visible */
+.char-tab {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  min-width: 44px;
+  height: 100%;
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--ash);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: color 0.3s;
+  padding: 12px 0;
+  user-select: none;
+}
+
+.char-card.active .char-tab {
+  color: var(--ghost);
+}
+
+.char-card:not(.active):hover .char-tab {
+  color: var(--pale);
+}
+
+/* Expandable content panel */
+.char-panel {
+  flex: 1;
+  min-width: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: opacity 0.3s ease 0.1s;
+  display: flex;
+  flex-direction: column;
+}
+
+.char-card.active .char-panel {
+  opacity: 1;
 }
 
 .char-portrait {
   width: 100%;
-  height: 200px;
+  height: 220px;
   object-fit: cover;
   object-position: top center;
   display: block;
+  flex-shrink: 0;
 }
 
 .char-info {
-  padding: 16px 18px 18px;
+  padding: 14px 16px 16px;
+  flex: 1;
+  overflow: hidden;
 }
 
 .char-creator {
@@ -868,7 +924,38 @@ a:hover {
   }
 
   .showcase-scroll {
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    flex-direction: column;
+    height: auto;
+    overflow-x: hidden;
+  }
+
+  .char-card {
+    width: 100% !important;
+    height: 48px;
+    flex-direction: column;
+    transition: height 0.4s ease;
+  }
+
+  .char-card.active {
+    height: auto;
+  }
+
+  .char-tab {
+    writing-mode: horizontal-tb;
+    width: 100%;
+    min-width: unset;
+    height: 48px;
+    min-height: 48px;
+    justify-content: flex-start;
+    padding: 0 16px;
+  }
+
+  .char-panel {
+    width: 100%;
+  }
+
+  .char-portrait {
+    height: 200px;
   }
 
   .sticky-nav {
@@ -915,7 +1002,9 @@ a:hover {
   }
 
   .showcase-scroll {
-    grid-template-columns: 1fr;
+    flex-direction: column;
+    height: auto;
+    overflow-x: hidden;
   }
 
   .sticky-nav {
