@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timeless Tavern</title>
+  <meta name="description" content="Step into the story. Timeless Tavern — an immersive AI roleplay community.">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏚</text></svg>">
+</head>
+<body>
+
+  <!-- Particle Canvas -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- Easter Egg Overlay -->
+  <div class="easter-egg-overlay" id="easter-egg-overlay">
+    <div class="easter-egg-content">
+      <h2>You Found the Secret Room</h2>
+      <p>"Not all who wander are lost... but some find what was hidden."</p>
+    </div>
+  </div>
+
+  <!-- Sound Toggle -->
+  <button class="sound-toggle" id="sound-toggle" title="Toggle ambient sound" aria-label="Toggle ambient sound">
+    <span id="sound-icon">&#9834;</span>
+  </button>
+
+  <!-- Sticky Navigation -->
+  <nav class="sticky-nav" id="sticky-nav">
+    <a href="#features">What Awaits</a>
+    <a href="#announcements">Notices</a>
+    <a href="#guide">Guide</a>
+    <a href="#community">Community</a>
+    <a href="#showcase">Showcase</a>
+  </nav>
+
+  <div class="page-wrapper">
+
+    <!-- ═══ HERO SECTION ═══ -->
+    <section class="hero" id="hero">
+      <div class="hero-tag">&#9670; Welcome, Traveler &#9670;</div>
+      <h1 class="hero-title" id="hero-title">Timeless Tavern</h1>
+      <p class="hero-tagline">Step into the story.</p>
+
+      <div class="separator">
+        <div class="separator-line"></div>
+        <div class="separator-diamond">&#9670;</div>
+        <div class="separator-line"></div>
+      </div>
+
+      <a href="https://timelesstavern.pub" class="cta-button" target="_blank" rel="noopener">
+        &#9758; Enter the Tavern
+      </a>
+
+      <div class="scroll-hint">&#9662; Scroll to explore</div>
+    </section>
+
+    <!-- ═══ TIME BAR ═══ -->
+    <div class="time-bar">
+      <span id="clock">--:--:--</span>
+      <span class="divider">&#9672;</span>
+      <span id="date-display">---</span>
+      <span class="divider">&#9672;</span>
+      <span class="time-flavor" id="time-flavor">The tavern doors stand open...</span>
+    </div>
+
+    <!-- ═══ WHAT AWAITS ═══ -->
+    <section class="section reveal" id="features">
+      <div class="section-header">
+        <div class="section-tag">&#9670; Discover</div>
+        <h2 class="section-title">What Awaits</h2>
+        <p class="section-subtitle">Everything the Tavern has to offer</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card glass">
+          <div class="feature-icon">&#9997;</div>
+          <div class="feature-title">AI Roleplay</div>
+          <div class="feature-desc">Engage in deep, immersive roleplay with advanced AI characters. Every conversation is unique, every story unfolds differently.</div>
+        </div>
+        <div class="feature-card glass">
+          <div class="feature-icon">&#128126;</div>
+          <div class="feature-title">Custom Characters</div>
+          <div class="feature-desc">Create and customize your own characters with rich backstories, personalities, and dialogue styles. Bring your imagination to life.</div>
+        </div>
+        <div class="feature-card glass">
+          <div class="feature-icon">&#9876;</div>
+          <div class="feature-title">Group Adventures</div>
+          <div class="feature-desc">Join fellow travelers in collaborative storytelling sessions. Build worlds together, face challenges as a party, forge legendary tales.</div>
+        </div>
+        <div class="feature-card glass">
+          <div class="feature-icon">&#127760;</div>
+          <div class="feature-title">Persistent Worlds</div>
+          <div class="feature-desc">Your stories carry forward. Characters remember, worlds evolve, and the consequences of your choices echo through time.</div>
+        </div>
+        <div class="feature-card glass">
+          <div class="feature-icon">&#127775;</div>
+          <div class="feature-title">Community Events</div>
+          <div class="feature-desc">Regular events, writing challenges, and themed sessions bring the community together. There's always something happening at the Tavern.</div>
+        </div>
+        <div class="feature-card glass">
+          <div class="feature-icon">&#128218;</div>
+          <div class="feature-title">Creative Tools</div>
+          <div class="feature-desc">Access lorebooks, writing aids, character builders, and more. Everything you need to craft compelling narratives, all in one place.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ ANNOUNCEMENTS ═══ -->
+    <section class="section reveal" id="announcements">
+      <div class="section-header">
+        <div class="section-tag">&#9670; Notice Board</div>
+        <h2 class="section-title">Announcements</h2>
+        <p class="section-subtitle">The latest from the Tavern keeper</p>
+      </div>
+
+      <div class="announcements-list">
+        <div class="announcement glass">
+          <div class="announcement-header">
+            <span class="announcement-tag new">New</span>
+            <span class="announcement-date">2026-03-10</span>
+          </div>
+          <div class="announcement-title">Welcome to Timeless Tavern</div>
+          <div class="announcement-body">The doors are open and the hearth is lit. Welcome to our new landing page — your gateway to the Tavern. Explore what we have to offer, check the Traveler's Guide if you're new, and step inside when you're ready.</div>
+        </div>
+
+        <div class="announcement glass">
+          <div class="announcement-header">
+            <span class="announcement-tag update">Update</span>
+            <span class="announcement-date">2026-03-10</span>
+          </div>
+          <div class="announcement-title">Server Improvements</div>
+          <div class="announcement-body">We've been working behind the scenes to improve performance and stability. Expect faster response times and smoother interactions across the board.</div>
+        </div>
+
+        <div class="announcement glass">
+          <div class="announcement-header">
+            <span class="announcement-tag event">Event</span>
+            <span class="announcement-date">2026-03-10</span>
+          </div>
+          <div class="announcement-title">Community Spotlight Coming Soon</div>
+          <div class="announcement-body">We're launching a monthly community spotlight to showcase the best characters, stories, and creative works from our travelers. Stay tuned for details on how to submit your work.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ TRAVELER'S GUIDE ═══ -->
+    <section class="section reveal" id="guide">
+      <div class="section-header">
+        <div class="section-tag">&#9670; Handbook</div>
+        <h2 class="section-title">Traveler's Guide</h2>
+        <p class="section-subtitle">Everything a newcomer needs to know</p>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item glass">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            How do I enter the Tavern?
+            <span class="arrow">&#9662;</span>
+          </div>
+          <div class="faq-answer">
+            <p>Click the "Enter the Tavern" button at the top of this page, or navigate directly to <a href="https://timelesstavern.pub" target="_blank" rel="noopener">timelesstavern.pub</a>. You'll be greeted by the login screen where you can access your account. If you're new and need credentials, reach out to the Tavern keeper through our Discord community.</p>
+          </div>
+        </div>
+
+        <div class="faq-item glass">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            What is SillyTavern?
+            <span class="arrow">&#9662;</span>
+          </div>
+          <div class="faq-answer">
+            <p>SillyTavern is a powerful, open-source interface for interacting with AI language models. It provides a rich environment for creative writing, roleplay, and storytelling with features like character cards, lorebooks, group chats, and much more. Timeless Tavern is our hosted instance, so you don't need to set up anything yourself.</p>
+          </div>
+        </div>
+
+        <div class="faq-item glass">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            What can I do here?
+            <span class="arrow">&#9662;</span>
+          </div>
+          <div class="faq-answer">
+            <p>The possibilities are vast:</p>
+            <ul>
+              <li>Create and roleplay with AI characters in any genre or setting</li>
+              <li>Build detailed worlds with lorebooks and persistent memory</li>
+              <li>Join group adventures with other community members</li>
+              <li>Use creative writing tools to develop stories, scripts, and more</li>
+              <li>Participate in community events and writing challenges</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="faq-item glass">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            Rules of the Tavern
+            <span class="arrow">&#9662;</span>
+          </div>
+          <div class="faq-answer">
+            <p>We keep it simple — be respectful, be creative, and be kind. This is a shared space for storytelling and imagination. Treat fellow travelers as you'd want to be treated. Any issues or concerns should be brought to the Tavern keeper directly.</p>
+          </div>
+        </div>
+
+        <div class="faq-item glass">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            Tips for new travelers
+            <span class="arrow">&#9662;</span>
+          </div>
+          <div class="faq-answer">
+            <p>Start small. Pick a character or scenario that interests you and dive in. Don't worry about getting everything perfect on your first try — the best stories come from exploration and experimentation. Check out the community Discord for tips from experienced travelers, and don't hesitate to ask questions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ COMMUNITY ═══ -->
+    <section class="section reveal" id="community">
+      <div class="section-header">
+        <div class="section-tag">&#9670; Gather</div>
+        <h2 class="section-title">Community</h2>
+        <p class="section-subtitle">Connect with fellow travelers</p>
+      </div>
+
+      <div class="community-grid">
+        <a href="https://timelesstavern.pub" target="_blank" rel="noopener" class="community-card glass">
+          <div class="community-icon">&#9876;</div>
+          <div class="community-info">
+            <div class="community-name">Enter the Tavern</div>
+            <div class="community-desc">Access the SillyTavern instance</div>
+          </div>
+        </a>
+
+        <a href="#" class="community-card glass" onclick="return false;">
+          <div class="community-icon">&#128172;</div>
+          <div class="community-info">
+            <div class="community-name">Discord</div>
+            <div class="community-desc">Join the conversation</div>
+          </div>
+        </a>
+
+        <a href="#" class="community-card glass" onclick="return false;">
+          <div class="community-icon">&#128214;</div>
+          <div class="community-info">
+            <div class="community-name">Guides & Docs</div>
+            <div class="community-desc">Learn the craft of storytelling</div>
+          </div>
+        </a>
+
+        <a href="#" class="community-card glass" onclick="return false;">
+          <div class="community-icon">&#127912;</div>
+          <div class="community-info">
+            <div class="community-name">Character Hub</div>
+            <div class="community-desc">Browse community characters</div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- ═══ CHARACTER SHOWCASE ═══ -->
+    <section class="section reveal" id="showcase">
+      <div class="section-header">
+        <div class="section-tag">&#9670; Hall of Fame</div>
+        <h2 class="section-title">Character Showcase</h2>
+        <p class="section-subtitle">Notable figures from our travelers' tales</p>
+      </div>
+
+      <div class="showcase-scroll">
+        <div class="char-card glass order-crimson">
+          <div class="char-name">The Wandering Alchemist</div>
+          <div class="char-role">Seeker of forgotten elixirs and lost remedies</div>
+          <span class="char-badge order-crimson">Physik</span>
+        </div>
+
+        <div class="char-card glass order-gold">
+          <div class="char-name">Sable Nightwhisper</div>
+          <div class="char-role">Keeper of threads between worlds</div>
+          <span class="char-badge order-gold">Weaver</span>
+        </div>
+
+        <div class="char-card glass order-violet">
+          <div class="char-name">Lord Ashenveil</div>
+          <div class="char-role">Sovereign of the twilight court</div>
+          <span class="char-badge order-violet">Crown</span>
+        </div>
+
+        <div class="char-card glass order-blue">
+          <div class="char-name">Sister Veil</div>
+          <div class="char-role">Warden of unseen passages</div>
+          <span class="char-badge order-blue">Shroud</span>
+        </div>
+
+        <div class="char-card glass order-green">
+          <div class="char-name">Briar Thornheart</div>
+          <div class="char-role">Herbalist of the outer gardens</div>
+          <span class="char-badge order-green">Bloom</span>
+        </div>
+
+        <div class="char-card glass order-crimson">
+          <div class="char-name">Dr. Corvus Flint</div>
+          <div class="char-role">Surgeon of questionable morality</div>
+          <span class="char-badge order-crimson">Physik</span>
+        </div>
+
+        <div class="char-card glass order-gold">
+          <div class="char-name">Madame Lux</div>
+          <div class="char-role">Weaver of fortunes and fates</div>
+          <span class="char-badge order-gold">Weaver</span>
+        </div>
+
+        <div class="char-card glass order-blue">
+          <div class="char-name">The Nameless One</div>
+          <div class="char-role">A whisper between the pages</div>
+          <span class="char-badge order-blue">Shroud</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ FOOTER ═══ -->
+    <footer class="footer">
+      <div class="separator" style="margin: 0 auto 30px;">
+        <div class="separator-line"></div>
+        <div class="separator-diamond">&#9670;</div>
+        <div class="separator-line"></div>
+      </div>
+      <div class="footer-brand">Timeless Tavern</div>
+      <div class="footer-tagline">Step into the story.</div>
+      <div class="footer-links">
+        <a href="https://timelesstavern.pub" target="_blank" rel="noopener">Enter</a>
+        <a href="#features">Features</a>
+        <a href="#announcements">Notices</a>
+        <a href="#guide">Guide</a>
+        <a href="#community">Community</a>
+      </div>
+      <div class="footer-credit">Powered by SillyTavern &middot; &copy; 2026 Timeless Tavern</div>
+    </footer>
+
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/particles.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/easter-eggs.js"></script>
+
+</body>
+</html>
